@@ -88,3 +88,37 @@ button:hover {
 }
 
 /*  oi */
+
+.animacao-container {
+  position: relative;
+  width: 2rem;       /* tamanho base igual ao dos corações */
+  height: 2rem;
+  margin: 0 auto;
+  overflow: visible; /* para que o coração possa sair do container */
+}
+
+.foto-coracao {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* deixa a foto redonda */
+  object-fit: cover;  /* para preencher sem deformar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  animation: subir 4s linear infinite; /* mesma animação dos corações */
+  z-index: 10; /* ficar acima dos corações */
+}
+
+
+@keyframes subirFoto {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
