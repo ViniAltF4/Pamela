@@ -1,13 +1,12 @@
 function mostrarCoracoes() {
   const emojis = ['❤️', '❤️', '❤️'];
 
-  // Criar 20 corações animados
+  // Criar 20 corações
   for (let i = 0; i < 20; i++) {
     const coracao = document.createElement('div');
     coracao.classList.add('heart');
     coracao.textContent = emojis[Math.floor(Math.random() * emojis.length)];
     coracao.style.left = Math.random() * 100 + 'vw';
-    coracao.style.top = '100vh';
     coracao.style.animationDuration = (Math.random() * 2 + 3) + 's';
     document.body.appendChild(coracao);
 
@@ -19,12 +18,17 @@ function mostrarCoracoes() {
   // Criar 5 fotos animadas subindo
   for (let i = 0; i < 5; i++) {
     const foto = document.createElement('img');
-    foto.src = 'eu.jpg';
+    foto.src = 'eu.jpg'; // sua foto
     foto.alt = 'Minha foto';
     foto.classList.add('foto-coracao');
+    foto.style.position = 'fixed';
     foto.style.left = Math.random() * 100 + 'vw';
     foto.style.top = '100vh';
-    foto.style.animationDuration = (Math.random() * 2 + 3) + 's';
+    foto.style.width = '2rem';
+    foto.style.height = '2rem';
+    foto.style.borderRadius = '50%';
+    foto.style.objectFit = 'cover';
+    foto.style.animation = 'subir 4s linear forwards';
     document.body.appendChild(foto);
 
     setTimeout(() => {
