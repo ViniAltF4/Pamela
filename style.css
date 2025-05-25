@@ -9,7 +9,8 @@ body {
 }
 
 .container {
-  margin-top: 20vh;
+  margin-top: 10vh;
+  padding: 20px;
 }
 
 h1 {
@@ -32,17 +33,48 @@ button {
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   transition: 0.3s;
+  margin-top: 2em;
 }
 
 button:hover {
   background-color: #ff2d55;
 }
 
+/* 💌 Carta de Perdão */
+.carta-perdao {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 700px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: left;
+  color: #fff;
+}
+
+.carta-perdao h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #ffd1dc;
+}
+
+.carta-perdao p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* ❤️ Animação de Corações */
 .heart {
   position: absolute;
   font-size: 2rem;
   animation: subir 4s linear infinite;
   color: #ff4b5c;
+  pointer-events: none;
+  user-select: none;
 }
 
 @keyframes subir {
