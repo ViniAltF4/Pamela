@@ -15,10 +15,10 @@ function mostrarCoracoes() {
     }, 5000);
   }
 
-  // Criar 5 fotos animadas subindo
+  // Criar 5 fotos subindo
   for (let i = 0; i < 5; i++) {
     const foto = document.createElement('img');
-    foto.src = 'eu.jpg'; // sua foto
+    foto.src = 'eu.jpg'; // seu arquivo de imagem
     foto.alt = 'Minha foto';
     foto.classList.add('foto-coracao');
     foto.style.position = 'fixed';
@@ -28,7 +28,7 @@ function mostrarCoracoes() {
     foto.style.height = '2rem';
     foto.style.borderRadius = '50%';
     foto.style.objectFit = 'cover';
-    foto.style.animation = 'subir 4s linear forwards';
+    foto.style.animation = 'subir 4s linear';
     document.body.appendChild(foto);
 
     setTimeout(() => {
